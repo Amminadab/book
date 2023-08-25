@@ -4,8 +4,8 @@ const FeaturedCard = ({ item }) => {
   return (
     <>
       <div className="box" key={item._id}>
-        <img src={item.cover_url} alt="" />
-        <h4>{item.name}</h4>
+        <img src={item.cover_url} className="image-book" alt={item.title} />
+        <h4>{item.title}</h4>
         <label>{item.total}</label>
       </div>
     </>
