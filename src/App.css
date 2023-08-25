@@ -172,3 +172,62 @@ img {
     height: 30vh;
   }
 }
+
+.image-book {
+  height: 80px;
+}
+.book-detail {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 3fr 5fr;
+}
+.img_b {
+  width: 80% !important;
+  height: 400px !important;
+}
+.aa {
+  margin-top: 20px;
+}
+.f3 {
+  font-size: 36px;
+}
+.links {
+  color: #27ae60 !important;
+}
+.pud {
+  margin: 10px 0;
+  font: 12px !important;
+  color: gray;
+}
+.img_c {
+  width: 30px;
+  height: 30px;
+  border-radius: 1000px;
+}
+.con {
+  margin: 20px 5px;
+}
+.star {
+  height: 32px;
+  width: 32px;
+  margin: 12px 2px;
+}
+.Author {
+  height: 240px !important;
+  width: 240px !important;
+}
+.author-detail {
+  margin: 20px 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 3fr 5fr;
+}
+.ft4 {
+  font-size: 20px !important;
+}
+.ull {
+  list-style-type: disc !important;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 16px;
+}
