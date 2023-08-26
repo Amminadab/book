@@ -44,7 +44,7 @@ const RecentCard = () => {
               <div className="text">
                 <div className="category flex">
                   {author.map((aut) => {
-                    console.log(aut.full_name);
+                    // console.log(aut.full_name);
                     return <p>{aut.full_name}</p>;
                   })}
                 </div>

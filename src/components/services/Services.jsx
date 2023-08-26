@@ -5,6 +5,7 @@ import "../home/featured/Featured.css";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import { ReactComponent as Star } from "../../assets/star.svg";
+import { toast } from "react-toastify";
 
 // import FeaturedCard from "../home/featured/FeaturedCard";
 
@@ -24,12 +25,12 @@ const Services = () => {
 
   const [author, setAuthor] = useState({
     picture_url: "",
-
     full_name: "",
     followers: [],
     birth_date: "",
     amazon_url: "",
     about: "",
+    _id: "",
   });
 
   const fetchBook = async () => {
@@ -62,7 +63,7 @@ const Services = () => {
           },
         });
         // setBook(response.data.data);
-        console.log(response.data.data.author);
+        // console.log(response.data.data.author);
         setAuthor(response.data.data.author);
         // console.log(response.data.data.books);
 
@@ -79,6 +80,37 @@ const Services = () => {
   useEffect(() => {
     fetchAuthor();
   }, [book.author]);
+
+  const followAuthor = async () => {
+    setIsLoading(true);
+
+    try {
+      const response = await axios.patch(
+        `/user/followauthor`,
+        { id: author._id },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      /*error*/
+      /*error*/
+      /*error*/
+      /*error*/
+      /*error*/
+
+      // setBook(response.data.data.book);
+      toast.success(response?.data?.message);
+      console.log(response, "r");
+
+      setIsLoading(false);
+    } catch (error) {
+      setIsLoading(false);
+      toast.error(error?.response?.data?.message);
+      console.log(error);
+    }
+  };
 
   return (
     <>
@@ -133,9 +165,18 @@ const Services = () => {
                       {author.full_name}
                     </Link>
                     {
-                      <p className="pud">
-                        Followers : {author.followers.length}
-                      </p>
+                      <div className="grid2">
+                        <p className="pud">
+                          Followers : {author.followers.length}
+                        </p>
+                        <button
+                          className="btn33"
+                          disabled={isLoading}
+                          onClick={followAuthor}
+                        >
+                          Follow
+                        </button>
+                      </div>
                     }
                     <p className="pud">{author.about}</p>
                   </div>

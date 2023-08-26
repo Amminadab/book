@@ -10,6 +10,8 @@ import Services from "../services/Services";
 import Contact from "../contact/Contact";
 import Author from "../author/Author";
 import Genre from "../genre/Genre";
+import Login from "../login/login";
+import SignUp from "../signup/signup";
 
 const Pages = () => {
   return (
@@ -22,7 +24,8 @@ const Pages = () => {
           <Route exact path="/book/:id" component={Services} />
           <Route exact path="/author/:id" component={Author} />
           <Route exact path="/genre/:id" component={Genre} />
-
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/signup" component={SignUp} />
           <Route exact path="/blog" component={Blog} />
 
           <Route exact path="/pricing" component={Pricing} />

@@ -85,10 +85,15 @@ h4 {
 .padding {
   padding: 80px 0;
 }
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+}
 .grid3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 30px;
+  grid-gap: 20px;
 }
 img {
   width: 100%;
@@ -97,7 +102,8 @@ img {
 }
 .btn2 {
   border-radius: 50px;
-  font-size: 20px;
+  font-size: 14px;
+  padding: 3px !important;
 }
 .grid4 {
   display: grid;
@@ -230,4 +236,106 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-top: 16px;
+}
+.btn33 {
+  padding: 5px 10px;
+}
+.login-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.login-container {
+  width: 350px !important;
+  border: 1px solid rgb(190, 190, 190);
+  padding: 20px;
+  border-radius: 10px;
+}
+.login-button {
+  width: 100%;
+  padding: 12px 0 !important;
+  margin-top: 50px !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+}
+.login-img {
+  /* text-align: center; */
+
+  width: 120px;
+  height: 120px;
+  border: none;
+  border-radius: 20000px;
+  transform: scale(1.1);
+  /* transform: translateY(-80px); */
+}
+.img-container {
+  margin-bottom: 30px;
+  justify-content: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.admin-login-form {
+  margin: 140px 10px;
+}
+.admin-login-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.admin-login-form2 {
+  margin: 10px 10px;
+}
+.admin-login-form2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add-admin-input {
+  width: 400px;
+  display: flex !important;
+  gap: 20px !important;
+  flex-direction: column !important;
+}
+.error {
+  width: 100%;
+  color: red;
+  background-color: rgb(255, 155, 155);
+  padding: 10px;
+  text-align: center;
+}
+.message {
+  width: 100%;
+  color: rgb(87, 112, 255);
+  background-color: rgba(155, 187, 255, 0.401);
+  padding: 10px;
+  text-align: center;
+}
+.success {
+  width: 100%;
+  color: rgb(0, 255, 98);
+  background-color: rgb(155, 255, 170);
+  padding: 10px;
+  text-align: center;
+}
+.center {
+  text-align: center;
+  color: #27ae60 !important;
+}
+.profileImage {
+  height: 30px;
+  width: 30px;
+  border-radius: 100px;
+}
+.flexer {
+  display: flex;
+  gap: 10px;
+}
+.mbot {
+  margin-bottom: 2rem;
+}
+.text2 {
+  padding: 15px !important;
 }
